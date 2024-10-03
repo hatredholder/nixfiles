@@ -1,6 +1,10 @@
-{ config, ...  }: 
+{ config, pkgs, ...  }: 
 
 {
+  home.packages = with pkgs; [
+    git-crypt # transparent file encryption in git
+  ];
+
   programs.git = {
     enable = true;
 
