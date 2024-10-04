@@ -11,34 +11,19 @@ in
     policies.DefaultDownloadDirectory = "${config.xdg.userDirs.download}";
     languagePacks = [ "fr" "en-US" ];
     profiles.${config.home.username} = {
-      extensions = with pkgs.nur.repos.rycee.firefox-addons;
-        [
-          # firefox
-          ublock-origin # https://addons.mozilla.org/firefox/addon/ublock-origin/
-          istilldontcareaboutcookies # https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/
-
-          # github
-          refined-github # https://addons.mozilla.org/firefox/addon/refined-github-/
-
-          # reddit
-          old-reddit-redirect # https://addons.mozilla.org/firefox/addon/old-reddit-redirect/
-        ]
-        ++ (with customAddons; [surfingkeys-custom tiled-tab-groups-custom soundfixer ctrl-number-tabs]);
-      search = {
-        force = true;
-        default = "Searx";
-        order = ["Searx" "DuckDuckGo"];
-        engines = {
-          "Searx" = {
-            urls = [{ template = "https://searx.be/search?q={searchTerms}";}];
-            iconUpdateURL = "https://searx.be/static/themes/oscar/img/favicon.png";
-          };
-          "Google".metaData.hidden = true;
-          "Bing".metaData.hidden = true;
-          "eBay".metaData.hidden = true;
-          "Qwant".metaData.hidden = true;
-        };
-      };
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        ublock-origin # https://addons.mozilla.org/firefox/addon/ublock-origin/
+        istilldontcareaboutcookies # https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/
+        refined-github # https://addons.mozilla.org/firefox/addon/refined-github-/
+      ]
+      ++ (with customAddons; [
+        # addons with custom settings
+        surfingkeys-custom # https://github.com/32bitclone/surfingkeys-custom
+        tiled-tab-groups-custom # https://github.com/32bitclone/tiled-tab-groups-custom
+        privacy-redirect-custom # https://github.com/32bitclone/privacy-redirect-custom
+        # addons not available in nix user repository
+        ctrl-number-tabs # https://addons.mozilla.org/firefox/addon/ctrl-number-to-switch-tabs
+      ]);
       bookmarks = {};
       containersForce = true;
       containers = {
