@@ -28,7 +28,7 @@
     pname = "privacy-redirect-custom";
     version = "1.0.0";
     url = "https://github.com/32bitclone/${pname}/raw/main/${pname}-${version}.xpi";
-    sha256 = "";
+    sha256 = "sha256-J1PKltbJVtsSsr7d75mAN9DE6ALCVR9qkKjfIgncZdw=";
     addonId = "privacy-redirect-custom@triptogeneva";
     meta = {
       homepage = "https://github.com/32bitclone/privacy-redirect-custom";
@@ -56,6 +56,17 @@
     meta = {
       homepage = "https://mybrowseraddon.com/font-defender.html";
       description = "defends against font fingerprinting by reporting a fake value";
+    };
+  };
+  chameleon = buildFirefoxXpiAddon rec {
+    pname = "chameleon_ext";
+    version = "0.22.65.1";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4349329/${pname}-${version}.xpi";
+    sha256 = "sha256-UPv7ZCla0eIqZEnggGilBKQIMvmX9uD+Y2BG0NIDISk=";
+    addonId = "{3579f63b-d8ee-424f-bbb6-6d0ce3285e6a}";
+    meta = {
+      homepage = "https://github.com/sereneblue/chameleon";
+      description = "spoof your browser profile";
     };
   };
 }

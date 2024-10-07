@@ -23,6 +23,7 @@ in
         # addons not available in nix user repository
         ctrl-number-tabs # https://addons.mozilla.org/firefox/addon/ctrl-number-to-switch-tabs
         font-fingerprint-defender # https://addons.mozilla.org/firefox/addon/font-fingerprint-defender/
+        chameleon # https://addons.mozilla.org/firefox/addon/chameleon-ext/
       ]);
       bookmarks = {};
       containersForce = true;
