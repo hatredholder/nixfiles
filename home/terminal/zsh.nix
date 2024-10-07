@@ -23,6 +23,7 @@
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos#${builtins.getEnv "HOSTNAME"}";
+      shutdown = "shutdown -h now";
       ss = "scrot --select --freeze --delay b2 ~/pictures/%Y-%m-%d-%T-screenshot.png";
 
       v = "nvim";
