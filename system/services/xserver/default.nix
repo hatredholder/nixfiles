@@ -11,7 +11,7 @@
     xkb = {
       layout = "us,ru";
       variant = "";
-      options = "caps:swapescape, grp:rshift_toggle";
+      options = "caps:swapescape, grp:rshift_toggle"; # swap caps with escape, change keyboard layout with right shift
     };
   };
 

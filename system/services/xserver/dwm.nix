@@ -13,15 +13,15 @@ let
       #define MAXLEN 2048
 
       static const struct arg args[] = {
-              /* function format          argument */
-              { keymap,      "🌍 %s ",        NULL     },
-              { uptime,      "⬆️ %s ",         NULL     },
-              { netspeed_rx, "🛜 %sB/s ",     "enp3s0" },
-              { cpu_perc,    "📀 CPU: %s%% ", NULL     },
-              { ram_perc,    "💿 RAM: %s%% ", NULL     },
-              { run_command, "🔊 %s ",        "${pkgs.wireplumber}/bin/wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/Volume: //'"},
-              { datetime,    "🗓️ %s ",         "%F"  },
-              { datetime,    "🕓 %s",         "%T"  },
+        /* function format          argument */
+        { keymap,      "🌍 %s ",        NULL     },
+        { uptime,      "⬆️ %s ",         NULL     },
+        { netspeed_rx, "🛜 %sB/s ",     "enp3s0" },
+        { cpu_perc,    "📀 CPU: %s%% ", NULL     },
+        { ram_perc,    "💿 RAM: %s%% ", NULL     },
+        { run_command, "🔊 %s ",        "${pkgs.wireplumber}/bin/wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/Volume: //'"},
+        { datetime,    "🗓️ %s ",         "%F"  },
+        { datetime,    "🕓 %s",         "%T"  },
       };
     '';
   });
