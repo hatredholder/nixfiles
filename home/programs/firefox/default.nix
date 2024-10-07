@@ -22,6 +22,7 @@ in
         privacy-redirect-custom # https://github.com/32bitclone/privacy-redirect-custom
         # addons not available in nix user repository
         ctrl-number-tabs # https://addons.mozilla.org/firefox/addon/ctrl-number-to-switch-tabs
+        font-fingerprint-defender # https://addons.mozilla.org/firefox/addon/font-fingerprint-defender/
       ]);
       bookmarks = {};
       containersForce = true;

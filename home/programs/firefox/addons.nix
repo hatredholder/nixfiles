@@ -47,4 +47,15 @@
       description = "ctrl + number to switch between open tabs";
     };
   };
+  font-fingerprint-defender = buildFirefoxXpiAddon rec {
+    pname = "font-fingerprint-defender";
+    version = "0.1.4";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4028360/${pname}-${version}.xpi";
+    sha256 = "sha256-hF4tHp/eZ9Iab0wrDti9gegYKYg6ypn5VpkZq8BumzQ=";
+    addonId = "{96ef5869-e3ba-4d21-b86e-21b163096400}";
+    meta = {
+      homepage = "https://mybrowseraddon.com/font-defender.html";
+      description = "defends against font fingerprinting by reporting a fake value";
+    };
+  };
 }
