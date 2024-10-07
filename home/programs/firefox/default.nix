@@ -25,6 +25,21 @@ in
         font-fingerprint-defender # https://addons.mozilla.org/firefox/addon/font-fingerprint-defender/
         chameleon # https://addons.mozilla.org/firefox/addon/chameleon-ext/
       ]);
+      search = {
+        force = true;
+        default = "Searx";
+        order = ["Searx" "DuckDuckGo"];
+        engines = {
+          "Searx" = {
+            urls = [{ template = "https://searx.be/search?q={searchTerms}";}];
+            iconUpdateURL = "https://searx.be/static/themes/simple/img/favicon.png";
+          };
+          "Google".metaData.hidden = true;
+          "Bing".metaData.hidden = true;
+          "eBay".metaData.hidden = true;
+          "Qwant".metaData.hidden = true;
+        };
+      };
       bookmarks = {};
       containersForce = true;
       containers = {
