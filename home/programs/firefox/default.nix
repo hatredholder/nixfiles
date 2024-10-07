@@ -14,7 +14,6 @@ in
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin # https://addons.mozilla.org/firefox/addon/ublock-origin/
         istilldontcareaboutcookies # https://addons.mozilla.org/firefox/addon/istilldontcareaboutcookies/
-        refined-github # https://addons.mozilla.org/firefox/addon/refined-github-/
       ]
       ++ (with customAddons; [
         # addons with custom settings
