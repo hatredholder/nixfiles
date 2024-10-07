@@ -13,8 +13,8 @@ in
      (pkgs.fetchFromGitHub {
       owner = "hatredholder";
       repo = "wallpapers";
-      rev = "44f30c56294fbcc0478b3a32ec5857b6a0870fdc";
-      sha256 = "sha256-ddCuLdYJv/wMX+2RpVmNQhV/koTzRaNwuLWu7q+8kIc=";
+      rev = "68a99257bff089d0ace4afd181e14e9e5b51604a";
+      sha256 = "sha256-R8nUGOD4UYV4r4JXf9w2EwHmqL76iLjRS7CMW43aqho=";
     });
   };
 
